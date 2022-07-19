@@ -1,24 +1,44 @@
 
-/* dinero = prompt("Bienvenido a La Heladeria. \n Helado 1/4kg : $100 \n Helado 1kg : $200 \n Helado 2kg : $300 \n cuanto dinero tienes?");
-
-if (dinero < 100){
-    alert ("No te alcanza para ningun helado")
-}
-else if (dinero >= 100 && dinero <200) {
-    alert("Podes comprar helado de 1/4kg")
-}
-else if (dinero >= 100 && dinero <300){
-    alert("Podes comprar helado de 1/4kg y de 1kg")
-}
-else if (dinero >= 100 && dinero >= 300) {
-    alert("Podes comprar helados de 1/4kg, de 1kg y de 2kg!")
-}*/
 
 
-let texto    = prompt("Escribe un texto ! Cuando quieras parar escribe ESC");
-let escribe = " ";
-while (texto != "ESC") {
-    escribe += texto +"_";
-    texto     = prompt("Escribe un texto ! Cuando quieras parar escribe ESC");
+
+let entrenoPlan1 = "Musculacion"
+let costoAdd1 = 3000
+let costoPlan1 = 3000
+
+let entrenoPlan2 = "Calistenia"
+let costoAdd2 = 0
+let costoPlan2 = 2000 
+
+let entrenoPlan3 = "Deportes"
+let costoAdd3 = 10000
+let costoPlan3 = 5000
+
+let Plan = (prompt("Ingrese el plan de entrenamiento que desea comprar y descubre sus beneficios : \n Musculacion \n Calistenia \n Deportes"))
+
+function calculoGastoPlan (){
+    if(Plan == entrenoPlan1){
+        alert("Costo del curso : $" + costoPlan1)
+        alert("Costos adicionales de : $" + costoAdd1)
+        alert("El total es de : $" + (costoPlan1 + costoAdd1))
+    }
+    else if(Plan == entrenoPlan2){
+        alert("Costo del curso : $" + costoPlan2)
+        alert("Costos adicionales de : $" + costoAdd2)
+        alert("El total es de : $" + (costoPlan2 + costoAdd2))
+    }
+    else if(Plan == entrenoPlan3){
+        alert("Costo del curso : $" + costoPlan3)
+        alert("Costos adicionales de : $" + costoAdd3)
+        alert("El total es de : $" + (costoPlan3 + costoAdd3))
+    }
+    else{
+        alert("Ese plan no existe >:(")
+    }
+        
+    
 }
-document.write ("Escribiste: " + escribe);
+
+calculoGastoPlan()
+
+
